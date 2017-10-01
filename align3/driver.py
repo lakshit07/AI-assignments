@@ -18,7 +18,7 @@ def main():
 			onscreenclick(findmark)
 			while True:
 				firstmove(0)
-				print "Do you want to quit (Y/N) ?",
+				print "Do you want to quit (Y/N) [Enter after playing the game] ?",
 				z = raw_input()
 				reset()
 				if z.lower() == 'y':
@@ -33,7 +33,7 @@ def main():
 			onscreenclick(findmarkab)
 			while True:
 				firstmove(1)
-				print "Do you want to quit (Y/N) ?",
+				print "Do you want to quit (Y/N) [Enter after playing the game] ?",
 				z = raw_input()
 				if z.lower() == 'y':
 					break
