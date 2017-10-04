@@ -1,3 +1,8 @@
+'''
+Name : LAKSHIT BHUTANI
+ID : 2014A7PS0095P
+'''
+
 from game import *
 import time
 s = tictactoe()
@@ -10,6 +15,10 @@ mwin = 0
 hwin = 0
 
 def isValid(x, y):
+	'''
+	Check if the click made by the user at coordinates (x,y) is valid or not
+	A valid move is within the grid and in the first empty row of a column
+	'''
 	if x < 100 or x > 500 or y > 200 or y < -200:
 		return None
 	else:
@@ -45,6 +54,9 @@ def isValid(x, y):
 				return None
 
 def firstmove(c):
+	'''
+	Makes the first move of the machine according to the algorithm
+	'''
 	s.state = []
 	s.player = 'X'
 	s.opposition = 'O'
@@ -71,6 +83,9 @@ def firstmove(c):
 
 
 def mrk(z):
+	'''
+	Displays the line over the three circles leading to the win/loss
+	'''
 	pen(fillcolor="black", pencolor="brown", pensize=3)
 	c = []
 	for p in z:
@@ -86,6 +101,9 @@ def mrk(z):
 
 
 def showresult(a, p = None):
+	'''
+	Displays WIN/ LOSS/ TIE of the current game
+	'''
 	onscreenclick(None)
 	global hwin
 	global mwin
@@ -117,6 +135,10 @@ def showresult(a, p = None):
 
 
 def findmark(x, y):
+	'''
+	OnClick listener which check the validity of the move and places the appropriate mark on the tile
+	It also makes the next machine move accordingly.
+	'''
 	z = isValid(x, y)
 	global notim
 	if z is not None:
@@ -155,6 +177,10 @@ def findmark(x, y):
 				notim += 1
 
 def findmarkab(x, y):
+	'''
+	OnClick listener which check the validity of the move and places the appropriate mark on the tile
+	It also makes the next machine move accordingly.
+	'''
 	global notim
 	z = isValid(x, y)
 	if z is not None:
@@ -193,6 +219,9 @@ def findmarkab(x, y):
 				notim += 1		
 
 def analysis():
+	'''
+	Displays the relevant information on the left panel
+	'''
 	pen(fillcolor="black", pencolor="black", pensize=2)
 	
 	# Minimax Analysis
@@ -203,7 +232,7 @@ def analysis():
 	pu()
 	goto(-500, 260)
 	pd()
-	write("Number of nodes generated : %d " % r[1], font=("Arial", 10, "normal"))
+	write("Number of distinct nodes generated : %d [Overall nodes : 7262072]" % r[1], font=("Arial", 10, "normal"))
 	pu()
 	goto(-500, 230)
 	pd()
@@ -233,7 +262,7 @@ def analysis():
 	pu()
 	goto(-500, 0)
 	pd()
-	write("Saving using Pruning : {} % " . format(((r[1] - r[6]) / r[1]) * 100), font=("Arial", 10, "normal"))
+	write("Saving using Pruning : {} % " . format(((7262072 - r[6]) / 7262072) * 100), font=("Arial", 10, "normal"))
 	pu()
 	goto(-500, -30)
 	pd()
@@ -247,17 +276,21 @@ def analysis():
 	pu()
 	goto(-500, -140)
 	pd()
-	write("Ratio of memory used in minimax to alpha-beta pruning : {} " .format(r[1]/r[6]), font=("Arial", 10, "normal"))
+	write("Memory used in minimax : {} bytes " .format(r[2]*r[3]), font=("Arial", 10, "normal"))
 	pu()
-	goto(-500, -170)
+	goto(-500, -160)
 	pd()
-	write("Average time to play the game : {} seconds" . format(r[10] / notim), font=("Arial", 10, "normal"))
+	write("Memory used in alpha-beta pruning : {} bytes " .format(r[2]*r[3]), font=("Arial", 10, "normal"))
 	pu()
 	goto(-500, -200)
 	pd()
-	write("Number of times M wins in 10 games : %d " % ((mwin/tgame) * 10) , font=("Arial", 10, "normal"))
+	write("Average time to play the game : {} seconds" . format(r[10] / notim), font=("Arial", 10, "normal"))
 	pu()
 	goto(-500, -230)
+	pd()
+	write("Number of times M wins in 10 games : %d " % ((mwin/tgame) * 10) , font=("Arial", 10, "normal"))
+	pu()
+	goto(-500, -260)
 	pd()
 	write("Number of times M wins in 200 games : %d " % ((mwin/tgame) * 200) , font=("Arial", 10, "normal"))
 	pu()
