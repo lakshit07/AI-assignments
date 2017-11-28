@@ -1,0 +1,2 @@
+Accompanied(X, Y) :- child X is accompanied by parent Y
+Interested(X, Y) :- child X is fascinated by aspect Y

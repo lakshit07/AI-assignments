@@ -1,0 +1,8 @@
+B(X, Y) :- Breeze in row X and column Y of grid
+S(X, Y) :- Stench in row X and column Y of grid
+G(X, Y) :- Glitter in row X and column Y of grid
+W(X, Y) :- Wumpus in row X and column Y of grid
+P(X, Y) :- Pit in row X and column Y of grid
+GO(X, Y) :- Gold in row X and column Y of grid
+Pos(X, Y) :- Position is row X and column Y
+Bestaction(X, Y, Z) :- Z is the best action at row X and column Y 

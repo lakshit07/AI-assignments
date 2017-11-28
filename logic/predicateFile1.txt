@@ -1,0 +1,12 @@
+Human(X) : X is Human
+Pompeian(X) : X is Pompeian
+Born(X, Y) : X was born in Y AD
+Mortal(X) : X is Mortal
+Volcano(X) : Volcano erupted in X AD
+Dead(X, Y) : X is Dead on Y AD
+Alive(X, Y) : X is Alive on Y AD
+Ruler(X) : X is a Ruler
+Loyal(X, Y) : X is Loyal to Y
+Assassinate(X, Y) : X (tried to) assassinated Y
+Hated(X, Y) : X Hated Y
+Now(X) : Presently it is X AD

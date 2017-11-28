@@ -1,0 +1,9 @@
+Native(X, Y) : X is Native of Y
+Aminian(X) : X is an Aminian
+Begonian(X) : X is a Begonian
+Current(X, Y) : X is Currently on island Y
+Truth(X) : X speaks Truth 
+False(X) : X speaks False
+Claimcurrent(X, Y) : X claims it is on island Y
+a, b, c, d, e, (f1, f2), (auk, bog) are people she meets on day1, day2, day3, day4, day5, fday6, and day7 respectively
+p is the person concerned

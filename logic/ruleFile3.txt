@@ -1,0 +1,18 @@
+For_every X (There_exists Y (Accompanied(X, Y)))
+For_every X (There_exists Y (Accompanied(Y, X)))
+For_every X (There_exists Y (Interested(X, Y)))
+not(Accompanied(lauren, reed))
+not(Accompanied(zach, reed))
+Interested(tara, shopping)
+Accompanied(zander, morgan)
+not(Interested(zander, hayride))
+not(Accompanied(lauren, fedor))
+not(Accompanied(zach, fedor))
+There_exists X (Accompanied(X, fedor) , Interested(X, cider))
+not(Interested(zach, hayride))
+not(Interested(zach, applepicking))
+There_exists X (Accompanied(X, hanson) , not(Interested(X, hayride)))
+
+Queries : 
+Accompanied(X, Y)
+Interested(X, Y)

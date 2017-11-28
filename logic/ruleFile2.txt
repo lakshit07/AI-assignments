@@ -1,0 +1,18 @@
+For_every X (Native(X, amin) -> Aminian(X))
+For_every X (Native(X, begone) -> Begonian(X))
+For_every X (For_every Y (Current(X, Y) , Native(X, Y) -> Truth(X)))
+For_every X (For_every Y ((Current(X, Y) , not(Native(X, Y))) -> False(X)))
+For_every X (For_every Y (Current(X, Y) -> (Native(X, Y) | Visitor(X, Y))))
+For_every X (For_every Y (Current(X, Y) , Native(X, Y) -> Claimcurrent(X, Y)))
+For_every X (For_every Y (Current(X, Y) , not(Native(X, Y)) -> not(Claimcurrent(X, Y))))
+For_every X (Current(X, amin) | Current(X, begone))
+For_every X (Native(X, amin) | Native(X, begone))
+
+Queries:
+Native(a, amin)
+Current(b, amin)
+Truth(c)
+Current(d, amin) -> Claimcurrent(d, begone)
+not(Current(e, amin) -> Claimcurrent(e, begone))
+((Native(f1, Amin), Native(f2, Begone)) | (Native(f1, Begone), Native(f2, Amin))), Claimcurrent(f2, amin)
+Native(Auk, Amin), Native(Bog, Begonian), Current(p, Amin)

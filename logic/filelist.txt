@@ -1,0 +1,17 @@
+cnf.py
+driver.py
+parser.py
+predicateFile1.txt
+predicateFile2.txt
+predicateFile3.txt
+predicateFile4.txt
+ruleFile1.txt
+ruleFile2.txt
+ruleFile3.txt
+ruleFile4.txt
+rules1.txt
+rules2.txt
+rules3.txt
+rules4.txt
+solution.py
+util.py
